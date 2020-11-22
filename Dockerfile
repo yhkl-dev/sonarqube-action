@@ -19,6 +19,10 @@ ENV NODE_PATH "/usr/lib/node_modules/"
 
 COPY entrypoint.sh /entrypoint.sh
 
+RUN mkdir /root/.sonar/cache
+
+COPY cache/ /root/.sonar/cache 
+
 RUN chmod +x /entrypoint.sh
 
 ENTRYPOINT ["/entrypoint.sh"]
