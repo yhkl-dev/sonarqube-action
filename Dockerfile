@@ -19,7 +19,7 @@ ENV NODE_PATH "/usr/lib/node_modules/"
 
 COPY entrypoint.sh /entrypoint.sh
 
-RUN mkdir /root/.sonar/cache
+RUN mkdir /root/.sonar/cache -p 
 
 COPY cache/ /root/.sonar/cache 
 
